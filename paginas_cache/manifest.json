@@ -1,0 +1,20 @@
+{
+    "name": "PWA Pages Demo",
+    "short_name": "PWA Demo",
+    "start_url": "index.html",
+    "display": "standalone",
+    "background_color": "#fff0f5",
+    "theme_color": "#ff69b4",
+    "icons": [
+        {
+            "src": "icons/sitio-web.png",
+            "sizes": "48x48",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/buscador.png",
+            "sizes": "72x72",
+            "type": "image/png"
+        }
+    ]
+}
