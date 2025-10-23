@@ -1,0 +1,83 @@
+-- borrar si existía
+DROP DATABASE IF EXISTS generacion_nomenclatura;
+
+-- crear base de datos
+CREATE DATABASE generacion_nomenclatura;
+USE generacion_nomenclatura;
+
+-- tabla generacion
+CREATE TABLE generacion (
+    id_generacion INT AUTO_INCREMENT PRIMARY KEY,
+    nombre INT NOT NULL,          -- número de generación
+    periodo_mes VARCHAR(50) NOT NULL,
+    periodo_anio INT NOT NULL     -- año de ingreso
+);
+
+-- tabla nomenclatura
+CREATE TABLE nomenclatura (
+    id_nomenclatura INT AUTO_INCREMENT PRIMARY KEY,
+    valor_numerico INT NOT NULL,
+    descripcion VARCHAR(10) NOT NULL,
+    id_generacion INT,
+    status TINYINT(1) DEFAULT 1,
+    FOREIGN KEY (id_generacion) REFERENCES generacion(id_generacion)
+);
+
+-- tabla usuario
+CREATE TABLE usuario (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL,
+    password VARCHAR(50) NOT NULL
+);
+
+INSERT INTO usuario (username, password)
+VALUES ('admin', '123');
+
+-- insertar generaciones reales de la UTEZ
+INSERT INTO generacion (nombre, periodo_mes, periodo_anio)
+VALUES
+(26, 'SEPTIEMBRE-2024 / ABRIL-2026', 2024),
+(25, 'FEBRERO-2024 / JULIO-2025', 2024),
+(24, 'AGOSTO-2023 / MARZO-2025', 2023),
+(23, 'ENERO-2023 / JULIO-2024', 2023),
+(22, 'AGOSTO-2022 / MARZO-2024', 2022),
+(21, 'ENERO-2022 / JULIO-2023', 2022),
+(20, 'AGOSTO-2021 / MARZO-2023', 2021),
+(19, 'ENERO-2021 / JULIO-2022', 2021),
+(18, 'AGOSTO-2020 / MARZO-2022', 2020),
+(17, 'ENERO-2020 / JULIO-2021', 2020),
+(16, 'AGOSTO-2019 / MARZO-2021', 2019),
+(15, 'ENERO-2019 / JULIO-2020', 2019);
+
+-- insertar nomenclaturas para todas las generaciones
+INSERT INTO nomenclatura (valor_numerico, descripcion, id_generacion)
+VALUES
+-- Generación 26
+(7, 'NA', 1), (8, 'SA', 1), (9, 'DE', 1), (10, 'AU', 1),
+-- Generación 25
+(7, 'NA', 2), (8, 'SA', 2), (9, 'DE', 2), (10, 'AU', 2),
+-- Generación 24
+(7, 'NA', 3), (8, 'SA', 3), (9, 'DE', 3), (10, 'AU', 3),
+-- Generación 23
+(7, 'NA', 4), (8, 'SA', 4), (9, 'DE', 4), (10, 'AU', 4),
+-- Generación 22
+(7, 'NA', 5), (8, 'SA', 5), (9, 'DE', 5), (10, 'AU', 5),
+-- Generación 21
+(7, 'NA', 6), (8, 'SA', 6), (9, 'DE', 6), (10, 'AU', 6),
+-- Generación 20
+(7, 'NA', 7), (8, 'SA', 7), (9, 'DE', 7), (10, 'AU', 7),
+-- Generación 19
+(7, 'NA', 8), (8, 'SA', 8), (9, 'DE', 8), (10, 'AU', 8),
+-- Generación 18
+(7, 'NA', 9), (8, 'SA', 9), (9, 'DE', 9), (10, 'AU', 9),
+-- Generación 17
+(7, 'NA', 10), (8, 'SA', 10), (9, 'DE', 10), (10, 'AU', 10),
+-- Generación 16
+(7, 'NA', 11), (8, 'SA', 11), (9, 'DE', 11), (10, 'AU', 11),
+-- Generación 15
+(7, 'NA', 12), (8, 'SA', 12), (9, 'DE', 12), (10, 'AU', 12);
+
+-- consultas de prueba
+SELECT * FROM generacion;
+SELECT * FROM nomenclatura;
+SHOW TABLES;

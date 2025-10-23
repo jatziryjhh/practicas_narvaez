@@ -1,0 +1,172 @@
+/* ===============================
+   General - Toda la app
+================================= */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Contenedores centrados */
+.container, .card {
+    margin-top: 30px;
+}
+
+/* ===============================
+   Tarjetas y sombras
+================================= */
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+}
+
+/* ===============================
+   Tablas estilizadas
+================================= */
+.table th {
+    background-color: #f79cff;
+    color: #fff;
+}
+
+.table td, .table th {
+    vertical-align: middle;
+    text-align: center;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #e9ecef;
+}
+
+/* ===============================
+   Botones
+================================= */
+.btn-primary {
+    background-color: #6c63ff;
+    border-color: #6c63ff;
+}
+
+.btn-primary:hover {
+    background-color: #5751d1;
+    border-color: #5751d1;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    border-color: #218838;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
+
+.btn-warning:hover {
+    background-color: #e0a800;
+    border-color: #e0a800;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
+}
+
+/* ===============================
+   Formularios
+================================= */
+.form-label {
+    font-weight: 500;
+}
+
+input.form-control {
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    padding: 10px;
+}
+
+input.form-control:focus {
+    border-color: #6c63ff;
+    box-shadow: 0 0 0 0.2rem rgba(108, 99, 255, 0.25);
+}
+
+/* ===============================
+   Login específico
+================================= */
+body.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card.login-card {
+    width: 350px;
+    padding: 30px;
+}
+
+/* ===============================
+   Alertas
+================================= */
+.alert {
+    text-align: center;
+}
+/* ===============================
+   Tablas con colores alternados y hover
+================================= */
+.table-striped tbody tr:hover {
+    background-color: rgba(108, 99, 255, 0.15); /* ligero violeta al pasar mouse */
+    transition: background-color 0.3s ease;
+}
+
+.table thead th {
+    background: linear-gradient(90deg, #6c63ff, #5751d1); /* gradiente en encabezado */
+    color: #fff;
+}
+
+/* ===============================
+   Botón + Agregar animado
+================================= */
+.btn-success {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.btn-success::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.2);
+    transform: skewX(-20deg);
+    transition: all 0.5s ease;
+}
+
+.btn-success:hover::after {
+    left: 100%;
+}
+
+.btn-success:hover {
+    background-color: #ba7cf3;
+    border-color: #ba7cf3;
+}
+
+/* ===============================
+   Botones pequeños consistentes
+================================= */
+.btn-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.85rem;
+    border-radius: 6px;
+}

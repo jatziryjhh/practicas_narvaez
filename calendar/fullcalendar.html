@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8' />
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.19/index.global.min.js'></script>
+    <link href="style.css" rel="stylesheet" />
+    <script>
+
+      document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          initialView: 'dayGridMonth'
+        });
+        calendar.render();
+      });
+
+    </script>
+    <script src="/main.js"></script>
+
+  </head>
+  <body>
+    <div class="container mt-5">
+      <a href="/index.html" class="ms-3">Home</a>
+        <a href="/fullcalendar.html" class="ms-3">Full calendar</a>
+        <a href="/Formulario.html" class="ms-3">Formulario</a>
+    </div>
+    <div id='calendar'></div>
+  </body>
+</html>

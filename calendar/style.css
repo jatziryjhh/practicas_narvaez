@@ -1,0 +1,65 @@
+/* -------------------- Fondo general y tipografía -------------------- */
+body {
+    background-color: #ffe6f0; /* rosa pastel */
+    color: #4d004d; /* texto morado suave para contraste */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* -------------------- Contenedor central -------------------- */
+.container {
+    background-color: #fff0f8; /* rosa muy suave */
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(255, 153, 204, 0.3);
+    text-align: center;
+    margin: 50px auto;
+    max-width: 600px;
+}
+
+/* -------------------- Enlaces -------------------- */
+a {
+    color: #ff66b2;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 15px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+a:hover {
+    color: #ff3399;
+    transform: scale(1.1);
+}
+
+/* -------------------- Títulos -------------------- */
+h1, h2 {
+    color: #ff3399;
+    margin-bottom: 30px;
+}
+
+/* -------------------- Select2 (Formulario) -------------------- */
+.select2-container--default .select2-selection--single {
+    background-color: #fff0f8;
+    border: 2px solid #ff66b2;
+    border-radius: 10px;
+    height: 40px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: #4d004d;
+    line-height: 36px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+    border-color: #4d004d transparent transparent transparent;
+}
+
+/* -------------------- FullCalendar -------------------- */
+#calendar {
+    background-color: #fff0f8;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(255, 153, 204, 0.3);
+    margin-top: 20px;
+}
