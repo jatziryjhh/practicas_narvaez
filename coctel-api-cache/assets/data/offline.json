@@ -1,8 +1,8 @@
 {
   "drinks": [
     {
-      "strDrink": "Sin conexión",
-      "strDrinkThumb": "/assets/images/coctel.jpg"
+      "strDrink": "Sin Conexión",
+      "strDrinkThumb": "./assets/images/coctel.png"
     }
   ]
 }

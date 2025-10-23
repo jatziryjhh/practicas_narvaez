@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex Diagnóstico</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .card-img-top {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            margin: auto;
+        }
+
+        .pokemon-card {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Diagnóstico</h1>
+        <div id="poke-container" class="row justify-content-center"></div>
+        <nav aria-label="Navegación de páginas">
+            <ul class="pagination justify-content-center mt-4">
+                <li class="page-item">
+                    <button id="prev-btn" class="page-link" disabled>Anterior</button>
+                </li>
+                <span id="page-tabs" class="d-flex"></span>
+                <li class="page-item">
+                    <button id="next-btn" class="page-link">Siguiente</button>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

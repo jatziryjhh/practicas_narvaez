@@ -3,29 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cocktail Finder</title>
+  <title>Buscador de Cócteles</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <link rel="manifest" href="manifest.json">
 </head>
 <body class="bg-light">
 
-  <div class="container py-3">
-    <h3 class="text-center mb-3">🍹 Buscador de Cócteles</h3>
+  <div class="container py-5">
+    <h1 class="text-center mb-4">Buscador de Cócteles</h1>
 
-    <!-- Buscador -->
     <div class="input-group mb-3">
-      <input type="text" id="searchInput" class="form-control" placeholder="Ej: margarita, mojito...">
+      <input type="text" id="searchInput" class="form-control" placeholder="Buscar cóctel (ej. Margarita)">
       <button id="searchBtn" class="btn btn-primary">Buscar</button>
     </div>
 
-    <div id="results" class="row row-cols-2 g-3">
-    </div>
+    <div id="results" class="row g-4"></div>
   </div>
 
-  <script src="main.js"></script>
-
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+  <script src="./main.js"></script>
 </body>
 </html>
